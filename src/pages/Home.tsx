@@ -1,11 +1,36 @@
+import { GoButton, Header, LoginBox, Subheader } from "../components";
+
 import React from "react";
+import styled from "styled-components";
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Lora", sans-serif;
+  font-weight: 12;
+`;
+
+const Content = styled.div`
+  margin: 0px;
+  padding: 0px 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const Home = () => (
-  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-    <text>Music Sport Performance Analysis</text>
-    <text>
-      Once developed, you will be able to log in to your Strava and Spotify profiles to see what
-      music makes you perform the best!
-    </text>
-  </div>
+  <Main>
+    <Header />
+    <Content>
+      <Subheader>
+        Log in to your Strava and Spotify profiled and click the button below to see what music
+        helps you perform your best.
+      </Subheader>
+      <LoginBox />
+      <GoButton>PERFORM ANALYSIS</GoButton>
+    </Content>
+  </Main>
 );
