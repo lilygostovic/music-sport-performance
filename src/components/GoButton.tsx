@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// todo:: diable if not both apps are connected
+
 export const GoButton = styled.button`
   min-width: 150px;
   padding: 20px 30px;
