@@ -3,13 +3,17 @@ import { Dashboard, Home } from "./pages";
 
 import React from "react";
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-    </Routes>
-  </BrowserRouter>
-);
+const App = () => {
+  const isAuthenticated = true;
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={isAuthenticated ? <Dashboard /> : <Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;

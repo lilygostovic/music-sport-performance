@@ -5,10 +5,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Content = styled.div`
-  width: 100vw;
+  width: 80vw;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const Dashboard = () => (

@@ -30,8 +30,7 @@ export const Overview = () => {
       style={{
         backgroundColor: "#fff3e0",
         borderRadius: "8px",
-        marginBottom: "72px",
-        width: "900px",
+        margin: "0px 10vw 72px 10vw",
         padding: "0px 36px 30px 36px",
 
         display: "flex",
