@@ -1,16 +1,7 @@
-import { GoButton, Header, LoginBox, Subheader } from "../components";
+import { GoButton, LoginBox, Main, Nav, Subheader } from "../components";
 
 import React from "react";
 import styled from "styled-components";
-
-const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-family: "Lora", sans-serif;
-  font-weight: 12;
-`;
 
 const Content = styled.div`
   margin: 0px;
@@ -23,7 +14,7 @@ const Content = styled.div`
 
 export const Home = () => (
   <Main>
-    <Header />
+    <Nav marginBottom="64px" />
     <Content>
       <Subheader>
         Log in to your Strava and Spotify profiled and click the button below to see what music

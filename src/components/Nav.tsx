@@ -1,13 +1,12 @@
 import { icon } from "../images/index";
 import styled from "styled-components";
 
-const HeaderDiv = styled.div`
+const Main = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
 
   padding: 12px;
-  margin-bottom: 64px;
 
   border-bottom: 1px solid lightgrey;
 `;
@@ -17,9 +16,13 @@ const Title = styled.header`
   padding-left: 12px;
 `;
 
-export const Header = () => (
-  <HeaderDiv>
+interface NavProps {
+  marginBottom?: string;
+}
+
+export const Nav = ({ marginBottom }: NavProps) => (
+  <Main style={{ marginBottom }}>
     <img src={icon} alt="stick man running on musical notes" width="24" height="24" />
     <Title>Music Sports Performance Analysis</Title>
-  </HeaderDiv>
+  </Main>
 );
