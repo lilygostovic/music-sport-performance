@@ -16,27 +16,23 @@ const PlatformDiv = styled.div`
 
 interface PlatformBlockProps {
   variant: "spotify" | "strava";
-  token: string;
+  token: string | null;
   authLink: string;
 }
 
 export const PlatformBlock = ({ variant, token, authLink }: PlatformBlockProps) => {
+  const isConnected = token !== null;
+
   const color = variant === "spotify" ? "#1db954" : "#fc4c02";
   const platform = variant === "spotify" ? "Spotify" : "Strava";
   const text = `Login with ${platform}`;
-
-  const isConnected = token !== ""; // todo:: why is this not updating
-
-  // useEffect(() => {
-  //   isConnected = token !== "";
-  // }, [token]);
 
   return (
     <PlatformDiv>
       <p>{platform}</p>
       <PlatformConnectButton
         onClick={() => {
-          window.open(authLink);
+          location.href = authLink;
         }}
         color={color}
         disabled={isConnected}>
