@@ -16,14 +16,16 @@ const Main = styled.div`
 `;
 
 export const LoginBox = () => {
-  // todo:: change logic to deal with refresh token
+  // todo:: change logic  to deal with refresh token
   const spotifyToken = localStorage.getItem("spotifyAccessToken");
   const stravaToken = localStorage.getItem("stravaAccessToken");
 
   const SPOTIFY_CLIENT_ID: string = process.env.REACT_APP_SPOTIFY_CLIENT_ID as string;
   const SPOTIFY_REDIRECT_URI: string = process.env.REACT_APP_SPOTIFY_REDIRECT_URI as string;
+
   const STRAVA_CLIENT_ID: string = process.env.REACT_APP_STRAVA_CLIENT_ID as string;
   const STRAVA_REDIRECT_URI: string = process.env.REACT_APP_STRAVA_REDIRECT_URI as string;
+
   const RESPONSE_TYPE = "code";
 
   return (

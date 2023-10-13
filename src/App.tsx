@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Dashboard, Home, SpotifyToken, StravaToken } from "./pages";
+import { Dashboard, Home } from "./pages";
+import { SpotifyToken, StravaToken } from "./components/tokens";
 
 import React from "react";
 
