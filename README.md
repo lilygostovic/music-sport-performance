@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# Music Sport Performance
+
+This project is intended to provide runners with a way to analyze their running performance in relation to the music they listen to while running.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Architecture
+
+### MVP
+The Spotify and Strava APIs will be used to collect user data. Once the user has authorized the use of both APIs, the app will monitor the user's Strava activities and fetch every running activity the user completes using the Strava Webhook Events API. When a new running activity is uploaded, the app will fetch the user's recently played songs from the Spotify API. The app will then run various computations to calculate metrics of the music listened to while running such as: average beats per minute, most popular genres, average song length, percentage of explicit songs. These metrics will then be saved to the user's history of runs in the app. All runs and related music metrics will be able to be viewed on a homepage dashboard. 
+
+### Next Steps
+* Create graphs to visualize trends in the music metrics
+* Extend to other sports in addition to running
+
+### Notes
+The Spotify API does not provide a way to access full history of music listened to, it is limited to the last 50 songs a user has played. It is for this reason that analysis can only be done on activities completed after the user has authenticated the app. 
+The Spotify API's endpoint to get recently played tracks currently does not support podcasts therefore neither will this application. 
 
 ## Available Scripts
 
